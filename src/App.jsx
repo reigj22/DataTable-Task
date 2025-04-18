@@ -1,12 +1,10 @@
-import UsersPage from "./pages/usersPage";
-import "./App.css";
+import React from 'react';
+import MainPage from './pages/MainPage';
 
-const App = () => {
+export default function App() {
   return (
-    <div style={{ padding: "2rem" }}>
-      <UsersPage />
+    <div>
+      <MainPage />
     </div>
   );
-};
-
-export default App;
+}
