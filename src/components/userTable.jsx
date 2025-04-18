@@ -1,7 +1,7 @@
 import React from "react";
 
 const DataTable = ({ data, onSort, sortKey, sortOrder }) => {
-    const renderSortIcon = (key) => {
+    const sortIcon = (key) => {
       if (key !== sortKey) return "⇅";
       return sortOrder === "asc" ? "↑" : "↓";
     };
@@ -11,13 +11,13 @@ const DataTable = ({ data, onSort, sortKey, sortOrder }) => {
         <thead>
           <tr>
             <th onClick={() => onSort("name")}>
-              User Name {renderSortIcon("name")}
+              User Name {sortIcon("name")}
             </th>
             <th onClick={() => onSort("email")}>
-              Email {renderSortIcon("email")}
+              Email {sortIcon("email")}
             </th>
             <th onClick={() => onSort("phone")}>
-              Phone {renderSortIcon("phone")}
+              Phone {sortIcon("phone")}
             </th>
           </tr>
         </thead>

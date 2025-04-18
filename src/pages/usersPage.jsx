@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useUsers } from "../hooks/getUsers";
+import { getUsers } from "../hooks/getUsers";
 import DataTable from "../components/userTable";
 import Pagination from "../components/Pagination";
 import SearchBar from "../components/searchBar";
 
 const UsersPage = () => {
   // Hook to fetch users
-  const { users } = useUsers();
+  const { users } = getUsers();
 
   // State for search query, sorting key, sorting order, and current page
   const [query, setQuery] = useState("");
